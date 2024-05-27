@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- "meta" , "name" , "viewport" these will make this html file responsive on mobile also-->
+    <meta name="description" content="Basic beginner Frontend website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Ayush Raj">
+    <!-- These above meta data is used by web brwosers , search engines (how to display or reload page , bring thsi page in search result if keywords matches etc etc) -->
+    <title>Component Library</title>
+    <link href="/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <h1> tagged lines will be the biggest sized lines -->
+    <h1 id="lib-head">
+        Let's get started with this COMPONENT LIBRARY.
+    </h1>
+    <p class="first-para">
+        We make this component library which we'll use to develop our portfolio and other projects.
+        I will make this library to make my projects look good and consistent.
+    </p>
+    <p>
+        This para contains <strong>bold</strong> text.
+    </p>
+    <small> Projects not yet decided! </small> <!-- <small> tagged lines will be the smallest sized lines -->
+
+    <hr> <!-- <hr> is called a thematic break , used to draw a line -->
+
+    <h2> @typography </h2>
+    <h3> fluid container </h3>
+    <div class="container container-fluid"> This is a fluid container and will extend till the specified width </div>
+    <!-- div is a placeholder -->
+    <h3> center container </h3>
+    <div class="container container-center"> This is a center container and will extend till the specified width in
+        center </div>
+
+
+    <hr>
+
+    <h2> @links </h2>
+    <a class="link link-primary" href="https://www.google.com">Go to google</a> &nbsp; &nbsp; &nbsp;
+    <a class="link link-secondary" href="https://www.google.com" target="_blank">Go to google</a>
+
+    <hr>
+
+    <h2>@lists</h2>
+    <h3>unordered list</h3>
+    <ul class="list-unordered">
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+    </ul>
+    <h3>unordered inline list</h3>
+    <ul class="list-unordered">
+        <li class="list-unordered-inline-item">Inline Item One</li>
+        <li class="list-unordered-inline-item">Inline Item Two</li>
+        <li class="list-unordered-inline-item">Inline Item Three</li>
+    </ul>
+    <h3>reverse ordered list</h3>
+    <ol reversed class="list-ordered">
+        <li class="list-ordered-item">Iron Man</li>
+        <li class="list-ordered-item">Hulk</li>
+        <li class="list-ordered-item">Thor</li>
+        <li class="list-ordered-item">Captain America</li>
+    </ol>
+
+    <hr>
+
+    <h2>@nav</h2>
+    <nav class="navigation container">
+        <div class="nav-brand">IamDeveloper</div>
+        <ul class="list-unordered nav-pills">
+            <li class="list-unordered-inline-nav-item"> <a class="link link-navigation link-active" href="/">HOME</a>
+            </li>
+            <li class="list-unordered-inline-nav-item"> <a class="link link-navigation" href="/">PROJECTS</a> </li>
+            <li class="list-unordered-inline-nav-item"> <a class="link link-navigation" href="/">ABOUT</a> </li>
+        </ul>
+
+    </nav>
+
+    <hr>
+
+    <h2>@header</h2>
+    <header class="hero">
+        <img class="hero-image" src="/images/hero-image.svg" />
+        <h1 class="hero-heading">I'm Ayush and this is my <span class="hero-heading-highlighted">Web Development
+                Portfolio</span></h1>
+    </header>
+
+    <hr>
+
+    <h2>@section</h2>
+    <section class="section">
+        <div class="container container-center">
+            <h3>white section</h3>
+            <p>this will have white background</p>
+        </div>
+    </section>
+    <section class="section section-off-white">
+        <div class="container container-center">
+            <h3>off-white section</h3>
+            <p>this will have grey background</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <h2>@footer</h2>
+    <footer class="footer">
+        <div class="footer-header">some small heading inside footer</div>
+        <ul class="list-unordered list-footer">
+            <li class="list-footer-item"><a class="link link-footer" href="/">social link 1</a></li>
+            <li class="list-footer-item"><a class="link link-footer" href="/">social link 2</a></li>
+            <li class="list-footer-item"><a class="link link-footer" href="/">social link 3</a></li>
+        </ul>
+    </footer>
+
+
+    <div style="height: 30vh;"></div>
+</body>
+
+</html>
