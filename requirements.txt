@@ -1,0 +1,5 @@
+langchain-google-genai
+flask
+openai
+langchain
+flask_cors
