@@ -1,5 +1,5 @@
 # Bat-Bot
- Talk to Batman!
+ Talk to Batman powered by Gemini!
 
 # Gemini API Key
 To integrate your Gemini API Key, execute the following command in your Python script once: 
