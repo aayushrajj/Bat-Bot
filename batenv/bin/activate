@@ -45,6 +45,9 @@ else
     export VIRTUAL_ENV="/Users/ayushraj/Documents/0 Code/Bat-Bot/batenv"
 fi
 
+# Set custom environment variables
+export MY_VARIABLE="value"
+
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH

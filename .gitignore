@@ -1,0 +1,6 @@
+# Ignore virtual environment
+batenv/
+
+# Ignore any other files or directories
+batenv/
+Old/
