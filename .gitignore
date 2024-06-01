@@ -4,3 +4,4 @@ batenv/
 # Ignore any other files or directories
 batenv/
 Old/
+.DS_Store
