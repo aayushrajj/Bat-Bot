@@ -5,3 +5,4 @@ batenv/
 batenv/
 Old/
 .DS_Store
+.env

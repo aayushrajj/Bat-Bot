@@ -4,6 +4,9 @@ from langchain_google_genai import GoogleGenerativeAI
 import google.generativeai as genai
 import sys
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +17,8 @@ def some_python_function(data):
     return data[::-1]
 
 def talk_to_gemini(user_prompt):
-    apikey = os.environ.get("GOOGLE_API_KEY")
+    apikey = os.getenv('GOOGLE_API_KEY')
+    # apikey = os.environ.get("GOOGLE_API_KEY")
     if apikey is None:
         raise ValueError("GOOGLE_API_KEY is not set in the environment.")
     genai.configure(api_key=apikey)
