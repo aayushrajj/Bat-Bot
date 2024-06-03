@@ -4,7 +4,7 @@
 
 /* css variables */
 :root {
-    --primary--color: #225e23; /*batman black*/
+    --primary--color: #90c691; /*batman black*/
     --light--yellow: #fefce8;
 }
 
@@ -12,7 +12,7 @@
 /* body */
 body {
     font-family: 'Fredoka One', cursive;
-    background-color:  #93c1c0; /*dark theme background*/
+    background-color:  #c7e9e8; /*dark theme background*/
     margin: 0px;
 }
 
@@ -21,7 +21,7 @@ body {
 /* navigation */
 .navigation {
     background-color: var(--primary--color);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 5px;
     text-align: center;
     font-size: 200%;
@@ -58,6 +58,7 @@ body {
 /* btn-translate */
 #btn-translate {
     background-color: var(--primary--color);
+    background-color: #274a27; 
     font-family: inherit;
     font-size: xx-small;
     padding: 25px 35px;
@@ -100,7 +101,7 @@ body {
 .footer {
     background-color: var(--primary--color);
     padding: 10px 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
