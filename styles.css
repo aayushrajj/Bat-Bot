@@ -58,7 +58,7 @@ body {
 /* btn-translate */
 #btn-translate {
     background-color: var(--primary--color);
-    background-color: #274a27; 
+    background-color: #59b659; 
     font-family: inherit;
     font-size: xx-small;
     padding: 25px 35px;
@@ -70,6 +70,10 @@ body {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+#btn-translate:hover {
+    background-color: #086e1e;
 }
 
 
