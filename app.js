@@ -53,6 +53,9 @@ async function conversation() {
             document.getElementById('chat-list').appendChild(botResponseElement);
         }
 
+        // Scroll to the bottom of the chat list
+        document.getElementById('chat-list').scrollTop = document.getElementById('chat-list').scrollHeight;
+
         // Clear the input field
         document.getElementById('user-input').value = '';
     }
@@ -60,6 +63,7 @@ async function conversation() {
 
 
 // what to do when a click happens...
+// btntranslate.addEventListener("click" , processText);
 btntranslate.addEventListener("click" , conversation);
 
 
