@@ -12,8 +12,8 @@ function errorHandler(error){
 
 
 // what to do when button clicks happens..
-async function processText() {
-    const inputText = textInput.value;
+async function processText(inputText) {
+    // const inputText = textInput.value;
     try {
         const response = await fetch('http://127.0.0.1:5000/api/process', {
             method: 'POST',
@@ -28,8 +28,7 @@ async function processText() {
         }
 
         const data = await response.json();
-        // document.getElementById('result').textContent = data.result;
-        outputDiv.innerText = data.result;
+        return data.result;
     } catch (error) {
         errorHandler(error);
     }
@@ -43,10 +42,16 @@ async function conversation() {
         userMessageElement.textContent = 'User: ' + userInput;
         document.getElementById('chat-list').appendChild(userMessageElement);
 
-        // Simulate chatbot response
-        const botResponseElement = document.createElement('li');
-        botResponseElement.textContent = 'Chatbot: ' + generateBotResponse(userInput);
-        document.getElementById('chat-list').appendChild(botResponseElement);
+        // Get chatbot response
+        const botResponse = await processText(userInput);
+        console.log(botResponse)
+
+        // Check if botResponse is not null before appending
+        if (botResponse !== null) {
+            const botResponseElement = document.createElement('li');
+            botResponseElement.textContent = 'Batman: ' + botResponse;
+            document.getElementById('chat-list').appendChild(botResponseElement);
+        }
 
         // Clear the input field
         document.getElementById('user-input').value = '';

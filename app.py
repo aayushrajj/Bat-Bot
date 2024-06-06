@@ -24,7 +24,7 @@ def talk_to_gemini(user_prompt):
     genai.configure(api_key=apikey)
     model = genai.GenerativeModel('gemini-pro')
     response = model.generate_content(user_prompt)
-    return response.text;
+    return response.text
 
 @app.route('/api/process', methods=['POST'])
 def process():
