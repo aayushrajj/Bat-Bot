@@ -1,6 +1,6 @@
 // first we fetched all the variables ( INPUT , OUTPUT , BUTTON ) required ahead 
 var btntranslate = document.querySelector("#btn-translate");
-var textInput = document.querySelector("#text-input");
+var textInput = document.querySelector("#user-input");
 var outputDiv = document.querySelector("#output");
 
 
@@ -35,8 +35,26 @@ async function processText() {
     }
 }
 
+async function conversation() {
+    const userInput = textInput.value;
+    if (userInput.trim() !== '') {
+        // Append user's message to the chat list
+        const userMessageElement = document.createElement('li');
+        userMessageElement.textContent = 'User: ' + userInput;
+        document.getElementById('chat-list').appendChild(userMessageElement);
+
+        // Simulate chatbot response
+        const botResponseElement = document.createElement('li');
+        botResponseElement.textContent = 'Chatbot: ' + generateBotResponse(userInput);
+        document.getElementById('chat-list').appendChild(botResponseElement);
+
+        // Clear the input field
+        document.getElementById('user-input').value = '';
+    }
+}
+
 
 // what to do when a click happens...
-btntranslate.addEventListener("click" , processText);
+btntranslate.addEventListener("click" , conversation);
 
 
