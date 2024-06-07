@@ -8,7 +8,7 @@
     --light--yellow: #fefce8;
 }
 
-html, body {
+html {
     height: 100%;
     margin: 0;
 }
@@ -16,6 +16,10 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Fredoka One', cursive;
+    background-color:  #c7e9e8; /*dark theme background*/
+    margin: 0;
+    height: 100%;
 }
 
 .main-container {
@@ -36,13 +40,6 @@ body {
     text-align: center;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
-}
-
-/* body */
-body {
-    font-family: 'Fredoka One', cursive;
-    background-color:  #c7e9e8; /*dark theme background*/
-    margin: 0px;
 }
 
 /* navigation */
