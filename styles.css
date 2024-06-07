@@ -8,15 +8,42 @@
     --light--yellow: #fefce8;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary--color);
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
 
 /* body */
 body {
     font-family: 'Fredoka One', cursive;
     background-color:  #c7e9e8; /*dark theme background*/
     margin: 0px;
-    height: 100%;
 }
-
 
 /* navigation */
 .navigation {
@@ -29,7 +56,6 @@ body {
     border-bottom-right-radius: 2rem;
     height: 200px;
 }
-
 
 /* input-text-area */
 .input-text-area {
@@ -48,7 +74,6 @@ body {
     line-height: 150%;
     background-color: var(--light--yellow);
 }
-
 
 /* container-btn */
 .container-btn {
@@ -76,7 +101,6 @@ body {
     background-color: #086e1e;
 }
 
-
 /* heading-output */
 .heading-output {
     text-align: center;
@@ -100,32 +124,22 @@ body {
     background-color: var(--light--yellow);
 }
 
-
 /* footer */
-.footer {
-    background-color: var(--primary--color);
-    padding: 10px 30px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-}
 .footer .list-footer .list-footer-item {
     list-style: none;
-    padding: 0px 20px;
+    padding: 0px 0px;
     display: inline;
 }
+
 .footer .link {
     text-decoration: none;
     color: white;
 }
 
-
 /* new style */
 .chat-container {
     width: 400px;  /* Increased width */
     margin: 0 auto;
-    /* border: 1px solid #ccc; */
     padding: 15px;
     border-radius: 10px;
 }
@@ -136,9 +150,7 @@ body {
     max-height: 300px;  /* Increased height */
     overflow-y: auto;
     margin-bottom: 15px;
-    /* border: 1px solid #ccc; */
     padding: 10px;
-    /* border-radius: 10px; */
 }
 
 #chat-list li {
@@ -153,11 +165,4 @@ body {
     border: 1px solid #ccc;
     padding: 10px;  /* Added padding */
     box-sizing: border-box;
-}
-
-.main-content{
-    flex: 1; /* This will make the content area take up all available space */
-    /* display: grid;
-    grid-template-rows: 1fr auto; /* 1fr for content, auto for footer */
-    /* min-height: 100vh; */
 }
