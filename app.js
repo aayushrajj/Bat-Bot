@@ -2,7 +2,13 @@
 var btntranslate = document.querySelector("#btn-translate");
 var textInput = document.querySelector("#user-input");
 var outputDiv = document.querySelector("#output");
+var audioID = document.querySelector("#click-sound");
 
+
+function playClickSound() {
+    var clickSound = audioID;
+    clickSound.play();
+}
 
 // there can be error sometimes , so a function for handling errors
 function errorHandler(error){
@@ -65,5 +71,6 @@ async function conversation() {
 // what to do when a click happens...
 // btntranslate.addEventListener("click" , processText);
 btntranslate.addEventListener("click" , conversation);
+btntranslate.addEventListener("click" , playClickSound);
 
 

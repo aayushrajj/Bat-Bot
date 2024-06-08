@@ -102,7 +102,7 @@ body {
 }
 
 /* btn-translate */
-#btn-translate {
+/* #btn-translate {
     background-color: var(--primary--color);
     background-color: #59b659; 
     font-family: inherit;
@@ -120,7 +120,34 @@ body {
 
 #btn-translate:hover {
     background-color: #086e1e;
+} */
+
+/* btn-translate */
+#btn-translate {
+    background-color: #59b659;
+    font-family: inherit;
+    font-size: 20px;
+    padding: 25px 35px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px #45a049; /* Adds the 3D effect shadow */
+    transition: all 0.1s ease-in-out;
 }
+
+#btn-translate:hover {
+    background-color: #086e1e;
+}
+
+#btn-translate:active {
+    transform: translateY(4px); /* Moves the button down when clicked */
+    box-shadow: 0 2px #45a049; /* Reduces the shadow size when clicked */
+}
+
 
 /* heading-output */
 .heading-output {
