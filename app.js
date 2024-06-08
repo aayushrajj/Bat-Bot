@@ -4,7 +4,7 @@ var textInput = document.querySelector("#user-input");
 var outputDiv = document.querySelector("#output");
 var audioID = document.querySelector("#click-sound");
 
-
+// button click audio
 function playClickSound() {
     var clickSound = audioID;
     clickSound.play();
