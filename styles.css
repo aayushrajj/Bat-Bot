@@ -35,7 +35,7 @@ body {
 /* footer */
 .footer {
     background-color: var(--primary--color);
-    padding: 10px 0;
+    padding: 10px 30px;
     color: rgb(0, 0, 0);
     text-align: center;
     border-top-left-radius: 2rem;
@@ -43,11 +43,16 @@ body {
 }
 
 /* footer */
-.footer .list-footer .list-footer-item {
-    text-align: center;
-    list-style-type: style;
-    padding: 10px 10px;
-    display: inline;
+.footer .list-footer{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.footer .list-footer-item {
+    list-style: none;
+    padding: 0px 15px;
+    display: inline-block;
 }
 
 .footer .link {
