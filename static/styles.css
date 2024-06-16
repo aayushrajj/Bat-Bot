@@ -1,0 +1,134 @@
+/* BEM naming convention used */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* css variables */
+:root {
+    --primary--color: #90c691; /*batman black*/
+    --light--yellow: #fefce8;
+    --font-family: 'Fredoka One', cursive; /* Define font-family variable */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c7e9e8;
+}
+
+/* navigation */
+.navigation {
+    background-color: var(--primary--color);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 150%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    height: 150px;
+    width: 100%;
+    font-family: var(--font-family); /* Apply font to navigation */
+}
+
+.navigation img {
+    width: 105px;
+    height: 105px;
+}
+
+.navigation strong {
+    font-size: 120%;
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary--color);
+    padding: 10px 30px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 100%;
+    font-family: var(--font-family); /* Apply font to navigation */
+}
+
+/* footer */
+.footer .list-footer {
+    padding: 0;
+    margin: 0;
+}
+
+.footer .list-footer-item {
+    list-style: none;
+}
+
+.footer .link {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* chat container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
+    height: 80vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e8efee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    font-family: var(--font-family);
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #ececec;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-control {
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #044212;
+}
+
+.btn:active {
+    transform: translateY(4px); /* Moves the button down when clicked */
+    box-shadow: 0 2px #45a049; /* Reduces the shadow size when clicked */
+}
+
+.spinner {
+    display: none;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
