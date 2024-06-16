@@ -10,6 +10,8 @@ File/
 Input/
 modules/
 scripts/
+app.js
+styles.css
 app2.py
 index2.html
 requirements2.txt
