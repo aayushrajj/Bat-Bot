@@ -2,6 +2,7 @@
 batenv/
 
 # Ignore any other files or directories
+.vscode/
 batenv/
 Old/
 .DS_Store
