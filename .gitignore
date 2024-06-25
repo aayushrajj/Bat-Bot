@@ -4,13 +4,8 @@ batenv/
 # Ignore any other files or directories
 .vscode/
 batenv/
-Old/
 .DS_Store
 .env
-File/
-Input/
-modules/
-scripts/
 app.js
 styles.css
 app2.py
