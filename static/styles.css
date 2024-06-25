@@ -2,12 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Gotham:wght@700&display=swap');
+
+
 /* css variables */
 :root {
     --primary--color: #90c691; /*batman black*/
     --light--yellow: #fefce8;
     --font-family: 'Fredoka One', cursive; /* Define font-family variable */
 }
+
+/* @font-face {
+    font-family: 'BatFont';
+    src: url('path/to/batfont.woff2') format('woff2'),
+         url('path/to/batfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
 
 body {
     font-family: Arial, sans-serif;
@@ -24,7 +35,8 @@ body {
     border-bottom-right-radius: 2rem;
     height: 150px;
     width: 100%;
-    font-family: var(--font-family); /* Apply font to navigation */
+    /* font-family: var(--font-family); */
+    font-family: 'Gotham', sans-serif;
 }
 
 .navigation img {
