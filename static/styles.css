@@ -7,7 +7,8 @@
 
 /* css variables */
 :root {
-    --primary--color: #90c691; /*batman black*/
+    /* --primary--color: #90c691; */
+    --primary--color: #639e69;
     --light--yellow: #fefce8;
     --font-family: 'Fredoka One', cursive; /* Define font-family variable */
 }
@@ -126,7 +127,6 @@ body {
     padding: 10px;
     overflow-y: auto;
     border-bottom: 1px solid #ccc;
-    /* font-family: var(--font-family); */
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
