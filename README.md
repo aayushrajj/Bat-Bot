@@ -1,5 +1,5 @@
 # Bat-Bot
- Talk to Batman powered by Gemini!
+ Converse with Chatbot powered by Gemini!
 
 # Gemini API Key
 To integrate your Gemini API Key, follow these steps:
