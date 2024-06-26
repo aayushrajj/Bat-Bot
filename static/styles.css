@@ -13,14 +13,6 @@
     --font-family: 'Fredoka One', cursive; /* Define font-family variable */
 }
 
-/* @font-face {
-    font-family: 'BatFont';
-    src: url('path/to/batfont.woff2') format('woff2'),
-         url('path/to/batfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #c7e9e8;
