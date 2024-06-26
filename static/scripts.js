@@ -18,6 +18,9 @@ function errorHandler(error){
         if (loadingPlaceholder) {
                 loadingPlaceholder.remove();
         }
+    // Clear the input field
+    userInput.value = '';
+    userInput.focus();
 }
 
 // what to do when button clicks happens..
@@ -95,9 +98,15 @@ async function sendMessage() {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+async function KeyboardEvent(event) {
+    if (event.key==='Enter'){
+        sendMessage();
+    }
+}
 
-// what to do when a click happens...
+// Add Event Listeners...
 btnsend.addEventListener("click" , playClickSound);
 btnsend.addEventListener("click" , sendMessage);
+userInput.addEventListener("keypress", KeyboardEvent);
 
 
