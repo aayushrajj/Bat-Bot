@@ -154,7 +154,7 @@ body {
 
 .btn:active {
     transform: translateY(4px); /* Moves the button down when clicked */
-    box-shadow: 0 2px #45a049; /* Reduces the shadow size when clicked */
+    box-shadow: 0 2px #639e69; /* Reduces the shadow size when clicked */
 }
 
 .spinner {
