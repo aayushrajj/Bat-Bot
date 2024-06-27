@@ -16,10 +16,6 @@ genai.configure(api_key=apikey)
 model = genai.GenerativeModel('gemini-pro')
 chat = model.start_chat(history=[])
 
-# Define a function you want to use in your frontend
-def some_python_function(data):
-    # For example, just reversing a string
-    return data[::-1]
 
 def talk_to_gemini(user_prompt):
     apikey = os.getenv('GOOGLE_API_KEY')
@@ -46,7 +42,6 @@ def conversation_with_gemini(user_prompt):
 def process():
     data = request.json
     input_text = data.get('input')
-    # result = talk_to_gemini(input_text)
     result = conversation_with_gemini(input_text)
     return jsonify({'result': result})
 
