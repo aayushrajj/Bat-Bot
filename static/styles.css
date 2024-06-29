@@ -148,6 +148,10 @@ body {
     margin-right: 10px;
 }
 
+.btn{
+    background-color: #39834a;
+}
+
 .btn:hover {
     background-color: #044212;
 }
@@ -164,4 +168,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+#btn-refresh {
+    background-color: #4ca360;
+    margin-left: 0;
 }

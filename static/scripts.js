@@ -1,7 +1,8 @@
 // first we fetched all the variables ( INPUT , OUTPUT , BUTTON ) required ahead 
 console.log(typeof marked); // should output 'function'
-var btnsend = document.querySelector("#btn-send");
+var btnSend = document.querySelector("#btn-send");
 var audioID = document.querySelector("#click-sound");
+var btnRefresh = document.querySelector("#btn-refresh");
 
 
 // button click audio
@@ -22,6 +23,15 @@ function errorHandler(error){
     userInput.value = '';
     userInput.focus();
 }
+
+function refreshPage(){
+    // Logic to refresh the chat messages
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.innerHTML = ''; // Clear the chat messages
+    userInput.value = '';
+    userInput.focus();
+}
+
 
 // what to do when button clicks happens..
 async function processText(inputText) {
@@ -106,8 +116,9 @@ async function KeyboardEvent(event) {
 }
 
 // Add Event Listeners...
-btnsend.addEventListener("click" , playClickSound);
-btnsend.addEventListener("click" , sendMessage);
+btnSend.addEventListener("click" , playClickSound);
+btnSend.addEventListener("click" , sendMessage);
 userInput.addEventListener("keypress", KeyboardEvent);
+btnRefresh.addEventListener("click", refreshPage);
 
 
