@@ -36,8 +36,8 @@ def conversation_with_gemini(user_prompt):
 
     global instruction
     prompt = instruction + user_prompt
-    response = chat.send_message(prompt, stream=True)
-    response.resolve() 
+    response = chat.send_message(prompt)
+    # response.resolve() 
     
     # try:
     #     response = chat.send_message(prompt, stream=True)
@@ -49,12 +49,13 @@ def conversation_with_gemini(user_prompt):
     #     response.resolve()
     # answer = chat.last
 
-    answer2 = ""
-    for message in chat.history:
-        answer2 = message.parts[0].text
+    # answer2 = ""
+    # for message in chat.history:
+    #     answer2 = message.parts[0].text
 
-    instruction = ""
-    return answer2
+    # instruction = ""
+    # return answer2
+    return response.text
     
 
 @app.route('/api/process', methods=['POST'])
