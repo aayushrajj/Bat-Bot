@@ -34,10 +34,31 @@ function refreshPage(){
 
 
 // what to do when button clicks happens..
+// async function processText(inputText) {
+//     try {
+//         const response = await fetch('http://127.0.0.1:5000/api/process', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ input: inputText }),
+//         });
+
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+
+//         const data = await response.json();
+//         return data.result;
+//     } catch (error) {
+//         errorHandler(error);
+//     }
+// }
+
 async function processText(inputText) {
-    // const inputText = textInput.value;
+    const backendURL = 'https://bat-bot-backend.onrender.com'; // Render backend URL
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/process', {
+        const response = await fetch('${backendURL}/api/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
