@@ -28,6 +28,9 @@ def conversation_with_gemini(user_prompt):
     instruction=""
     return response.text
     
+@app.route('/')
+def home():
+    return "Welcome to the Flask backend!"
 
 @app.route('/api/process', methods=['POST'])
 def process():
