@@ -45,7 +45,7 @@ def process():
     print("Welcome to the Flask backend!")
     data = request.json
     input_text = data.get('input')
-    result = "Welcome to the Flask backend!"
+    result = conversation_with_gemini(input_text)
     return jsonify({'result': result})
 
 if __name__ == '__main__':
