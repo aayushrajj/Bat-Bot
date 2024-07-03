@@ -28,12 +28,13 @@ def conversation_with_gemini(user_prompt):
     instruction=""
     return response.text
     
-@app.route('/')
-def home():
-    return "Welcome to the Flask backend!"
+# @app.route('/')
+# def home():
+#     return "Welcome to the Flask backend!"
 
-@app.route('/api/process', methods=['POST'])
+@app.route('/', methods=['POST'])
 def process():
+    print("Welcome to the Flask backend!")
     data = request.json
     input_text = data.get('input')
     result = conversation_with_gemini(input_text)
