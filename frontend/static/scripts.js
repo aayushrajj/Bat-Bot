@@ -58,7 +58,7 @@ function refreshPage(){
 async function processText(inputText) {
     const backendURL = 'https://bat-bot-backend.onrender.com'; // Render backend URL
     try {
-        const response = await fetch('${backendURL}/api/process', {
+        const response = await fetch('${backendURL}/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
