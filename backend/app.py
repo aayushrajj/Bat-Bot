@@ -32,12 +32,20 @@ def conversation_with_gemini(user_prompt):
 # def home():
 #     return "Welcome to the Flask backend!"
 
-@app.route('/', methods=['POST'])
+# @app.route('/', methods=['POST'])
+# def process():
+#     print("Welcome to the Flask backend!")
+#     data = request.json
+#     input_text = data.get('input')
+#     result = conversation_with_gemini(input_text)
+#     return jsonify({'result': result})
+
+@app.route('/api/process', methods=['POST'])
 def process():
     print("Welcome to the Flask backend!")
     data = request.json
     input_text = data.get('input')
-    result = conversation_with_gemini(input_text)
+    result = "Welcome to the Flask backend!"
     return jsonify({'result': result})
 
 if __name__ == '__main__':
