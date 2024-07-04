@@ -24,41 +24,35 @@ function errorHandler(error){
     userInput.focus();
 }
 
-function refreshPage(){
-    // Logic to refresh the chat messages
-    const chatMessages = document.getElementById('chatMessages');
-    chatMessages.innerHTML = ''; // Clear the chat messages
-    userInput.value = '';
-    userInput.focus();
+// memory refresh API call
+async function initializeChat() {
+    const backendURL = 'https://bat-bot-backend.onrender.com'; // Render backend URL
+    // const localURL = 'http://127.0.0.1:5000'; // Render backend URL
+    try {
+        const response = await fetch(`${backendURL}/api/memory_refresh`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        return data.message;
+    } catch (error) {
+        errorHandler(error);
+    }
 }
 
-
-// what to do when button clicks happens..
-// async function processText(inputText) {
-//     try {
-//         const response = await fetch('http://127.0.0.1:5000/api/process', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({ input: inputText }),
-//         });
-
-//         if (!response.ok) {
-//             throw new Error('Network response was not ok');
-//         }
-
-//         const data = await response.json();
-//         return data.result;
-//     } catch (error) {
-//         errorHandler(error);
-//     }
-// }
-
-async function processText(inputText) {
+// conversation API call
+async function processChat(inputText) {
     const backendURL = 'https://bat-bot-backend.onrender.com'; // Render backend URL
+    // const localURL = 'http://127.0.0.1:5000'; // Render backend URL
     try {
-        const response = await fetch(`${backendURL}/api/process`, {
+        const response = await fetch(`${backendURL}/api/conversation`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,6 +69,19 @@ async function processText(inputText) {
     } catch (error) {
         errorHandler(error);
     }
+}
+
+function refreshPage(){
+    // Call initializeChat to reset the backend chat
+    initializeChat().then(message => {
+        console.log('Chat initialized:', message);
+    });
+
+    // Logic to refresh the chat messages
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.innerHTML = ''; // Clear the chat messages
+    userInput.value = '';
+    userInput.focus();
 }
 
 async function sendMessage() {
@@ -106,8 +113,8 @@ async function sendMessage() {
     // Scroll to the bottom of the chat
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // get response from Gemini
-    const botResponse = await processText(userInput.value);
+    // Get response from Gemini
+    const botResponse = await processChat(userInput.value);
     console.log('Bot Response:', botResponse);
 
     // Remove loading spinner
