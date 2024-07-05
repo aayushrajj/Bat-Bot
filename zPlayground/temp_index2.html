@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Note Toggle</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .note {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            width: 200px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 position-relative">
+        <button id="helpButton" class="btn btn-primary">Help</button>
+        <div id="helpNote" class="note">
+            This is the help note with some information.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('helpButton').addEventListener('click', function() {
+            const helpNote = document.getElementById('helpNote');
+            if (helpNote.style.display === 'none' || helpNote.style.display === '') {
+                helpNote.style.display = 'block';
+            } else {
+                helpNote.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
