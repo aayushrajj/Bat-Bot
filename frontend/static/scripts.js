@@ -3,6 +3,8 @@ console.log(typeof marked); // should output 'function'
 var btnSend = document.querySelector("#btn-send");
 var audioID = document.querySelector("#click-sound");
 var btnRefresh = document.querySelector("#btn-refresh");
+var helpButton = document.querySelector('#helpButton');
+var helpNote = document.querySelector('#helpNote');
 
 
 // button click audio
@@ -23,6 +25,18 @@ function errorHandler(error){
     userInput.value = '';
     userInput.focus();
 }
+
+// info section
+function initializeHelpDisplay() {
+    const helpTooltip = document.getElementById("helpTooltip");
+    if (helpTooltip) {
+        const tooltipText = document.createElement("span");
+        tooltipText.className = "tooltiptext";
+        tooltipText.textContent = "The first response may take a moment as the chatbot wakes up. Subsequent responses will be faster.";
+        helpTooltip.appendChild(tooltipText);
+    }
+}
+
 
 // memory refresh API call
 async function initializeChat() {
@@ -71,6 +85,7 @@ async function processChat(inputText) {
     }
 }
 
+// refresh chat 
 function refreshPage(){
     // Call initializeChat to reset the backend chat
     initializeChat().then(message => {
@@ -84,6 +99,7 @@ function refreshPage(){
     userInput.focus();
 }
 
+// chat
 async function sendMessage() {
     const userInput = document.getElementById('userInput');
     const chatMessages = document.getElementById('chatMessages');
@@ -139,14 +155,29 @@ async function sendMessage() {
 async function KeyboardEvent(event) {
     if (event.key==='Enter'){
         sendMessage();
-        playClickSound();
     }
 }
+
 
 // Add Event Listeners...
 btnSend.addEventListener("click" , playClickSound);
 btnSend.addEventListener("click" , sendMessage);
 userInput.addEventListener("keypress", KeyboardEvent);
 btnRefresh.addEventListener("click", refreshPage);
+initializeHelpDisplay();
 
 
+$('[data-toggle="tooltip"]').tooltip({
+    delay: { "show": 10, "hide": 0 },
+    boundary: 'window'
+});
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// $(document).ready(function(){
+//   $('[data-toggle="tooltip"]').tooltip({
+//     delay: { "show": 10, "hide": 0 },
+//     boundary: 'window'
+//   }
+//   );
+// })
