@@ -176,78 +176,19 @@ body {
     margin-left: 0;
 }
 
-/* CSS for the helpDisplay */
-/* .popup {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #c7e9e8;
-    border: 1px solid #ced4da;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(65, 31, 31, 0.1);
-    z-index: 1;
-    width: 300px;
-} */
-
-/* #helpButton {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-}
-
-#helpNote {
-    display: none;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 250px;
-    padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #c7e9e8;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(65, 31, 31, 0.1);
-} */
-
 /* Tooltip container */
-.tooltip-container {
+/* .tooltip-container {
     position: relative;
     display: inline-block;
     margin-right: 10px;
-}
 
-.tooltip-button {
-    font-family: var(--font-family);
-    background-color: var(--primary--color);
-    color: rgb(0, 0, 0);
-    padding: 6px 12px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.tooltip-button .lni {
-    font-size: 1.2rem;
-}
-
-.tooltip-button:hover {
-    background-color: #044212;
-}
-
-/* Show the tooltip box when hovering over the tooltip button */
-.tooltip-button:hover + .tooltip-box {
-    visibility: visible;
-    opacity: 1;
-}
+    position: absolute;
+    top: 20%;
+    right: 5%;
+} */
 
 /* Tooltip box */
-.tooltip-box {
+/* .tooltip-box {
     visibility: hidden;
     width: 200px;
     background-color: #cbe8e3;
@@ -264,10 +205,10 @@ body {
     transition: opacity 0.3s;
     font-family: var(--font-family);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Optional: Add an arrow to the tooltip */
-.tooltip-box::after {
+/* .tooltip-box::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -276,6 +217,56 @@ body {
     border-width: 5px;
     border-style: solid;
     border-color: #e8efee transparent transparent transparent;
+} */
+
+/* Show the tooltip box when hovering over tooltip text */
+/* .tooltip-text:hover + .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+} */
+
+
+/* Tooltip container */
+#helpTooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#helpTooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #cbe8e3;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 125%;
+    margin-left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#helpTooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #cbe8e3 transparent transparent;
+}
+
+#helpTooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
 }
 
 

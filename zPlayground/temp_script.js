@@ -19,3 +19,26 @@ document.getElementById('chat-button').addEventListener('click', function() {
 
 hamBurger.addEventListener("click", toggleSidebar);
 hidebar.addEventListener("click", toggleSidebar);
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const tooltipHover = document.getElementById("tooltipHover");
+//     const tooltipBox = document.getElementById("tooltipBox");
+
+//     tooltipHover.addEventListener("mouseenter", function () {
+//         tooltipBox.style.visibility = "visible";
+//         tooltipBox.style.opacity = "1";
+//     });
+
+//     tooltipHover.addEventListener("mouseleave", function () {
+//         tooltipBox.style.visibility = "hidden";
+//         tooltipBox.style.opacity = "0";
+//     });
+
+//     document.addEventListener("click", function (event) {
+//         if (!tooltipHover.contains(event.target)) {
+//             tooltipBox.style.visibility = "hidden";
+//             tooltipBox.style.opacity = "0";
+//         }
+//     });
+// });
