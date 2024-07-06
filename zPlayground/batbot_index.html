@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatGPT</title>
+    <link rel="icon" href="/frontend/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link href="/frontend/static/styles.css" rel="stylesheet" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navigation d-flex align-items-center justify-content-center">
+        <a href="https://batman.fandom.com/wiki/Batman_Wiki" target="_blank" class="mx-2"><img src="/frontend/images/batman-nav.svg" alt="batman" class="img-fluid"></a>
+        <strong class="mx-2">BAT BOT</strong>
+        <a href="https://batman.fandom.com/wiki/Batman_Wiki" target="_blank" class="mx-2"><img src="/frontend/images/batman-nav.svg" alt="batman" class="img-fluid"></a>
+    </nav>
+
+    <!-- Container for helpDisplay -->
+    <!-- <div class="container mt-5 position-relative">
+        <button id="helpButton" class="btn lni lni-question-circle float-right mt-3 mr-3"></button>
+        <div id="helpNote" class="popup">
+            The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.
+        </div>
+    </div> -->
+<!-- 
+    <div class="container mt-5">
+        <div class="tooltip">Hover over me
+            <span class="tooltiptext">The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.</span>
+        </div>
+    </div> -->
+
+    <!-- <div class="tooltip">Hover over me
+        <span class="tooltiptext">The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.</span>
+    </div> -->
+
+    <main class="container my-4 flex-grow-1 d-flex justify-content-center align-items-center">
+        <div class="tooltip-container">
+            <!-- <span class="tooltip-text" id="tooltipHover">Hover over me!</span> -->
+            <!-- <button class="btn tooltip-button" id="tooltipHover">Hover over me!</button> -->
+            <!-- <button class="btn tooltip-button" id="tooltipHover"><span class=" btn lni lni-support"></span></button> -->
+            <span class="btn tooltip-text lni lni-support"></span>
+            <span class="tooltip-box" id="tooltipBox">The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.</span>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header d-flex justify-content-between align-items-center">
+                <button id="btn-refresh" class="btn lni lni-reload"></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="chat-input input-group">
+                <input type="text" id="userInput" class="form-control" placeholder="Ask Batman...">
+                <button id="btn-send" class="btn lni lni-arrow-up-circle"></button>
+            </div>
+        </div>
+        <!-- <button id="helpButton" class="btn lni lni-question-circle"></button>
+        <div id="helpNote" class="note">
+            The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.
+        </div> -->
+    </main>
+
+    <footer class="footer mt-auto">
+        <h3 class="footer-head">About</h3>
+        <p><strong>💕 Chat with Gemini AI enabled Bot! 💕</strong></p>
+        <ul class="list-footer d-flex justify-content-center">
+            <li class="list-footer-item mx-2">
+                <a class="link" href="https://github.com/aayushrajj" target="_blank">
+                    <img src="/frontend/images/github.svg" alt="github">
+                </a>
+            </li>
+            <li class="list-footer-item mx-2">
+                <a class="link" href="https://www.linkedin.com/in/ayush-raj-0309/" target="_blank">
+                    <img src="/frontend/images/linkedin.svg" alt="linkedin">
+                </a>
+            </li>
+            <li class="list-footer-item mx-2">
+                <a class="link" href="https://twitter.com/aaayushrajjj" target="_blank">
+                    <img src="/frontend/images/twitter.svg" alt="twitter">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <audio id="click-sound" src="audio/handgun-click.mp3" preload="auto"></audio>
+    <script src="/frontend/static/scripts.js" type="text/javascript"></script>
+</body>
+</html>

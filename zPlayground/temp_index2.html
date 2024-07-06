@@ -19,6 +19,35 @@
             border-radius: 4px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border: 1px solid red; /* Debugging border */
+            cursor: pointer;
+        }
+    
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px; /* Increased padding for visibility */
+            position: absolute;
+            z-index: 1;
+            bottom: 150%; /* Position above the tooltip element */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 2px solid blue; /* Debugging border */
+        }
+    
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -27,6 +56,10 @@
         <div id="helpNote" class="note">
             This is the help note with some information.
         </div>
+    </div>
+
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">The first response may take a moment as the chatbot wakes up. Subsequent messages will be faster.</span>
     </div>
 
     <script>
