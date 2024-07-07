@@ -42,3 +42,20 @@ hidebar.addEventListener("click", toggleSidebar);
 //         }
 //     });
 // });
+
+
+// $('[data-toggle="tooltip"]').tooltip({
+//   delay: { "show": 10, "hide": 0 },
+//   boundary: 'window'
+// });
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// $(document).ready(function(){
+//   $('[data-toggle="tooltip"]').tooltip({
+//     delay: { "show": 10, "hide": 0 },
+//     boundary: 'window'
+//   }
+//   );
+// })
+
