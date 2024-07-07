@@ -165,19 +165,3 @@ btnSend.addEventListener("click" , sendMessage);
 userInput.addEventListener("keypress", KeyboardEvent);
 btnRefresh.addEventListener("click", refreshPage);
 initializeHelpDisplay();
-
-
-$('[data-toggle="tooltip"]').tooltip({
-    delay: { "show": 10, "hide": 0 },
-    boundary: 'window'
-});
-// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-// $(document).ready(function(){
-//   $('[data-toggle="tooltip"]').tooltip({
-//     delay: { "show": 10, "hide": 0 },
-//     boundary: 'window'
-//   }
-//   );
-// })
