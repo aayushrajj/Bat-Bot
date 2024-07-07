@@ -155,6 +155,7 @@ async function sendMessage() {
 async function KeyboardEvent(event) {
     if (event.key==='Enter'){
         sendMessage();
+        playClickSound();
     }
 }
 
