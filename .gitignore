@@ -4,5 +4,7 @@ batenv/
 # Ignore any other files or directories
 .vscode/
 batenv/
+dump/
+zPlayground/
 .DS_Store
 .env
