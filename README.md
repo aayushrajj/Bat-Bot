@@ -27,15 +27,15 @@ To run the project locally, follow these steps:
 
 3. **Set up the backend**:
    - Navigate to the `backend` folder.
-   - Ensure your Python environment meets the requirements specified in `requirements.txt`.
-   - Configure your Gemini API credentials in `.env` file.
+   - Ensure your Python environment meets the requirements specified in `requirements.txt`
+   - Configure your Gemini API credentials in `.env`
 
 4. **Deploying Backend**:
    - Deploy backend on Render for production ready application.
 
 ## Configuration
 
-- **Gemini API Integration**: Replace the placeholder API key `GOOGLE_API_KEY=your-gemini-api-key`in `.env` file present in the `backend` folder with your actual Gemini API keys.
+- **Gemini API Integration**: Replace the placeholder API key `GOOGLE_API_KEY=your-gemini-api-key` in `.env` present in the `backend` folder with your actual Gemini API keys.
 
 ## Contributing
 
