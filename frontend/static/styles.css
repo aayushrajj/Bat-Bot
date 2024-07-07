@@ -1,16 +1,17 @@
 /* BEM naming convention used */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Gotham:wght@700&display=swap');
 
 
 /* css variables */
 :root {
-    /* --primary--color: #90c691; */
-    --primary--color: #639e69;
+    --bd-violet-bg: #135119;
+    --button--color: #39834a;
+    /* --primary--color: #639e69; */
+    --primary--color: #3c7543;
     --light--yellow: #fefce8;
-    --font-family: 'Fredoka One', cursive; /* Define font-family variable */
+    --font-family: 'Fredoka One', cursive;
 }
 
 body {
@@ -29,7 +30,6 @@ body {
     height: 150px;
     width: 100%;
     font-family: var(--font-family);
-    /* font-family: 'Gotham', sans-serif; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transform: perspective(1000px) rotateX(10deg);
     transition: transform 0.3s ease;
@@ -63,7 +63,7 @@ body {
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     width: 100%;
-    font-family: var(--font-family); /* Apply font to navigation */
+    font-family: var(--font-family);
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     transform: perspective(1000px) rotateX(-10deg);
     transition: transform 0.3s ease;
@@ -112,6 +112,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px 0;
+    overflow: visible;
 }
 
 .chat-messages {
@@ -138,6 +139,7 @@ body {
     align-self: flex-start;
 }
 
+
 .chat-input {
     display: flex;
     padding: 10px;
@@ -150,11 +152,11 @@ body {
 
 .btn{
     font-weight: bolder;
-    background-color: #39834a;
+    background-color: var(--button--color);
 }
 
 .btn:hover {
-    background-color: #044212;
+    background-color: #064a16;
 }
 
 .btn:active {
@@ -172,6 +174,55 @@ body {
 }
 
 #btn-refresh {
-    /* background-color: #4ca360; */
     margin-left: 0;
 }
+
+/* Tooltip container */
+#helpTooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#helpTooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #72947c;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 125%;
+    margin-left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:small;
+}
+
+#helpTooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #72947c transparent transparent;
+    z-index: 1000;
+}
+
+#helpTooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}
+
+
+
+
+
