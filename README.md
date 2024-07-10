@@ -1,6 +1,8 @@
 # Bat-Bot
  Converse with Batman powered by Gemini!
 
+ ![BatBot Screenshot](assets/screenshot.png)
+
 # Project Description
 
 Welcome to the BatBot project! This project showcases a dynamic web application where users can engage in conversations with a chatbot themed with the personality of Batman. The backend is powered by Python, deployed on Render, and utilizes the Gemini API for natural language processing.
